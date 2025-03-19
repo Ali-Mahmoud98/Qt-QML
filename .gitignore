@@ -1,0 +1,5 @@
+.obsidian
+.vscode
+build
+CMakeLists.txt.user
+Generated

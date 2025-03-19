@@ -1,0 +1,110 @@
+classDiagram
+    class QWidget {
+        <<Base Class>>
+    }
+    
+    class FormApp {
+        +FormApp(QWidget *parent)
+        +QString username() const
+        +void setUsername(const QString &username)
+        -validateForm()
+        -submitForm()
+        -resetForm()
+        -updatePreview()
+        -QLineEdit *m_nameEdit
+        -QLineEdit *m_emailEdit
+        -QSpinBox *m_ageSpinBox
+        -QComboBox *m_countryCombo
+        -QCheckBox *m_newsletterCheck
+        -QPushButton *m_submitButton
+        -QPushButton *m_resetButton
+        -QLabel *m_previewLabel
+        -QLabel *m_statusLabel
+    }
+    
+    QWidget <|-- FormApp
+    
+    class QLineEdit {
+        <<Widget>>
+    }
+    
+    class QSpinBox {
+        <<Widget>>
+    }
+    
+    class QComboBox {
+        <<Widget>>
+    }
+    
+    class QCheckBox {
+        <<Widget>>
+    }
+    
+    class QPushButton {
+        <<Widget>>
+    }
+    
+    class QLabel {
+        <<Widget>>
+    }
+    
+    FormApp "1" *-- "1" QLineEdit : m_nameEdit
+    FormApp "1" *-- "1" QLineEdit : m_emailEdit
+    FormApp "1" *-- "1" QSpinBox : m_ageSpinBox
+    FormApp "1" *-- "1" QComboBox : m_countryCombo
+    FormApp "1" *-- "1" QCheckBox : m_newsletterCheck
+    FormApp "1" *-- "1" QPushButton : m_submitButton
+    FormApp "1" *-- "1" QPushButton : m_resetButton
+    FormApp "1" *-- "1" QLabel : m_previewLabel
+    FormApp "1" *-- "1" QLabel : m_statusLabel
+
+    note for FormApp "Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)"
+    
+    %% Layout structure
+    class FormLayout {
+        <<Layout>>
+        QGroupBox (Form)
+    }
+    
+    class PreviewLayout {
+        <<Layout>>
+        QGroupBox (Preview)
+    }
+    
+    class ButtonLayout {
+        <<Layout>>
+        Horizontal
+    }
+    
+    class MainLayout {
+        <<Layout>>
+        Vertical
+    }
+    
+    FormApp "1" *-- "1" MainLayout : contains
+    MainLayout "1" *-- "1" FormLayout : contains
+    MainLayout "1" *-- "1" PreviewLayout : contains
+    MainLayout "1" *-- "1" ButtonLayout : contains
+    
+    %% Signal flow diagram
+    class Signals {
+        <<Signals>>
+        usernameChanged(QString)
+        formSubmitted()
+    }
+    
+    class Connections {
+        <<Connections>>
+        m_nameEdit.textChanged → validateForm()
+        m_nameEdit.textChanged → updatePreview()
+        m_emailEdit.textChanged → validateForm()
+        m_emailEdit.textChanged → updatePreview()
+        m_ageSpinBox.valueChanged → updatePreview()
+        m_countryCombo.currentIndexChanged → updatePreview()
+        m_newsletterCheck.stateChanged → updatePreview()
+        m_submitButton.clicked → submitForm()
+        m_resetButton.clicked → resetForm()
+    }
+    
+    FormApp "1" *-- "1" Signals : emits
+    FormApp "1" *-- "1" Connections : contains

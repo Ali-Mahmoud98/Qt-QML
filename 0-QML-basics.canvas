@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"acce0a573df2caaf","type":"file","file":"1-QML-introduction.canvas","x":-1180,"y":-340,"width":400,"height":400},
+		{"id":"0b08342d7f05faf0","type":"text","text":"QML Basics","x":-520,"y":-100,"width":160,"height":60},
+		{"id":"1ebfd00b6863ec1a","type":"file","file":"QML/qml1/README.md","x":-560,"y":-660,"width":400,"height":400},
+		{"id":"6658c3e5210198a1","type":"text","text":"Starting With Qt  QML","x":-1360,"y":-580,"width":205,"height":60},
+		{"id":"6e92d96c114ba6dd","type":"file","file":"QML/0-Comments.md.md","x":-180,"y":-160,"width":400,"height":400},
+		{"id":"45a62a2361c8db81","type":"file","file":"QML/1-rootObj-ID.md","x":-180,"y":280,"width":400,"height":400},
+		{"id":"1bd9f22c0684a5c3","type":"file","file":"QML/2-qmlObj-vs-qObj.md","x":-180,"y":740,"width":400,"height":400},
+		{"id":"d81770c6f6a3ec0b","x":-840,"y":740,"width":400,"height":400,"type":"file","file":"QML/3-positioning-parentChild-relationship.md"},
+		{"id":"82b7759e5176c640","x":-1280,"y":740,"width":400,"height":400,"type":"file","file":"QML/6-QML-basic-types.md"}
+	],
+	"edges":[
+		{"id":"ead3e90f0fb6c3ba","fromNode":"6658c3e5210198a1","fromSide":"right","toNode":"acce0a573df2caaf","toSide":"top","label":"1. Introduction"},
+		{"id":"ec877fb5997351cb","fromNode":"acce0a573df2caaf","fromSide":"right","toNode":"1ebfd00b6863ec1a","toSide":"left","label":"2. QML project\nstructure"},
+		{"id":"4c40565b54c6bfc6","fromNode":"1ebfd00b6863ec1a","fromSide":"bottom","toNode":"0b08342d7f05faf0","toSide":"top","label":"3"},
+		{"id":"1a4b25601785ec79","fromNode":"acce0a573df2caaf","fromSide":"right","toNode":"0b08342d7f05faf0","toSide":"top","label":"3"},
+		{"id":"29d5d5971350eca7","fromNode":"0b08342d7f05faf0","fromSide":"right","toNode":"6e92d96c114ba6dd","toSide":"left","label":"3.0.  comments"},
+		{"id":"36267d94baa35392","fromNode":"0b08342d7f05faf0","fromSide":"bottom","toNode":"45a62a2361c8db81","toSide":"left","label":"3.1. root and ID\nconcepts"},
+		{"id":"34a8466ab8b2a7d0","fromNode":"0b08342d7f05faf0","fromSide":"bottom","toNode":"1bd9f22c0684a5c3","toSide":"left","label":"3.2. QML Objects\nvs QObjects"},
+		{"id":"4de4207c7e60b4a1","fromNode":"0b08342d7f05faf0","fromSide":"bottom","toNode":"d81770c6f6a3ec0b","toSide":"top","label":"3.3."},
+		{"id":"d6f6f8c4e73f5710","fromNode":"0b08342d7f05faf0","fromSide":"bottom","toNode":"82b7759e5176c640","toSide":"top","label":"3.4. QML Basic\nTypes"}
+	]
+}

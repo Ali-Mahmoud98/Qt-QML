@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"482e456d44be3bf8","type":"text","text":"QML was designed to be a layer above Qt core, so it is just a graphical layer.","x":-285,"y":-320,"width":220,"height":120},
+		{"id":"4cf4bfa528ed037e","type":"text","text":"QML sets on top of C++","x":-300,"y":-80,"width":175,"height":60},
+		{"id":"1f5c080289e5de83","type":"text","text":"The content here needs to know about:\n* Qt Basics\n* C++ Basics","x":-337,"y":-500,"width":377,"height":120},
+		{"id":"e6c977c4d3d810cc","type":"text","text":"QML vs Qt Quick:\n* QML is a language -> Qt Markup language also called Qt Modelling Language depending on which page you visit.\n* QML is the user interface to a C++ or Python (using PySide2) application.\n* QML is the user interface that sits on top of a C++ or Python application.\n* QML applications can use JavaScript and interface with back-end C++ or Python.","x":-85,"y":-160,"width":505,"height":320},
+		{"id":"2c7877943f35d5de","type":"text","text":"What is Qt Quick? and What is QML?\n-> Qt Quick is the standard library for all QML applications, providing the basic types for creating and animating visual elements (e.g. button).\n-> QML is the language to control the button that is inside of Qt Quick.\n-> **QML focuses on the user interface**, rendering, and visula effects.","x":80,"y":250,"width":520,"height":230},
+		{"id":"8e8fbfa2f8208465","type":"text","text":"QML application has access to all Qt through binding and connections:\n* Qt uses a signals and slots communicate between `Objects` \n* QML using signals and slots through bindings and connections.","x":-397,"y":250,"width":370,"height":220},
+		{"id":"48aed3dbf8f82370","type":"text","text":"So now, you have highly responsive front-end that can have some programming logic and that logic can communicates with some of the wold's most powerful back-end technologies","x":340,"y":-380,"width":370,"height":160},
+		{"id":"77b12b795c0eba8d","type":"text","text":"QML vs Qt Widgets","x":-559,"y":135,"width":222,"height":50},
+		{"id":"0af158c07792000b","type":"text","text":"Qt Widgets:\n1. legacy\n2. long term support\n3. Tight desktop integration with Windows, Mac, Linux, and all major desktops.\n4. Not support embedded, mobile, and so on.\n5. Really shines because it attempts to look native.","x":-397,"y":520,"width":370,"height":320},
+		{"id":"4deee8f18fa814df","type":"text","text":"QML:\n1. Newer\n2. long term support\n3. easy animation states, and transition.\n4. Separates the GUI from from the implementation.\n5. Runs anywhere:\n\t1. Desktop\n\t2. Mobile\n\t3. Embedded","x":-397,"y":860,"width":370,"height":360},
+		{"id":"75aac608ab4d883e","type":"text","text":"Write Once Build Anywhere:\n* Build on target platforms, copy the code to the target platform and build it.\n* Qt does support a cross-compile and remote deployment, but its a bit advanced, So you could create on windows and deploy to Linux embedded.","x":168,"y":620,"width":432,"height":240},
+		{"id":"c0998d06ea84b6f3","type":"file","file":"Qt-core/README.md","x":-880,"y":-640,"width":400,"height":400},
+		{"id":"0885e1c714b359f1","type":"file","file":"Qt-core/1-moc-qobject.md","x":-1560,"y":-640,"width":400,"height":400},
+		{"id":"3ed1b175afc3273c","type":"file","file":"Qt-core/2-containers-smartPointers.md","x":-1560,"y":-150,"width":400,"height":400},
+		{"id":"a5bcf0502e5bd39b","type":"file","file":"Qt-core/3-eventLoop-eventHandling.md","x":-1560,"y":340,"width":400,"height":400},
+		{"id":"4c2f1797cbb5d70c","type":"file","file":"Qt-core/4-FileI_O-dataStreams-in-Qt.md","x":-1560,"y":820,"width":400,"height":400},
+		{"id":"990f2f5b4e7cfdd3","type":"file","file":"Qt-core/5-x-performance_best_practise.md","x":-1000,"y":820,"width":400,"height":400},
+		{"id":"5f46d7dd4d15a9ec","type":"text","text":"## **START**","x":320,"y":-640,"width":160,"height":80}
+	],
+	"edges":[
+		{"id":"b05a51fb6e9438cd","fromNode":"482e456d44be3bf8","fromSide":"bottom","toNode":"4cf4bfa528ed037e","toSide":"top"},
+		{"id":"60b440b85d99b31e","fromNode":"482e456d44be3bf8","fromSide":"top","toNode":"1f5c080289e5de83","toSide":"bottom"},
+		{"id":"8ec89350bc564e19","fromNode":"482e456d44be3bf8","fromSide":"right","toNode":"e6c977c4d3d810cc","toSide":"top"},
+		{"id":"acfbdccea284832f","fromNode":"e6c977c4d3d810cc","fromSide":"right","toNode":"48aed3dbf8f82370","toSide":"bottom"},
+		{"id":"507dab04beb31125","fromNode":"e6c977c4d3d810cc","fromSide":"bottom","toNode":"8e8fbfa2f8208465","toSide":"top"},
+		{"id":"534e74117d95271c","fromNode":"e6c977c4d3d810cc","fromSide":"bottom","toNode":"2c7877943f35d5de","toSide":"top"},
+		{"id":"65485b52010ffbbc","fromNode":"482e456d44be3bf8","fromSide":"left","toNode":"77b12b795c0eba8d","toSide":"top"},
+		{"id":"da1fb60446f51f9d","fromNode":"77b12b795c0eba8d","fromSide":"bottom","toNode":"0af158c07792000b","toSide":"left"},
+		{"id":"703def8dc26a66a3","fromNode":"77b12b795c0eba8d","fromSide":"bottom","toNode":"4deee8f18fa814df","toSide":"left"},
+		{"id":"328f2054ce92a351","fromNode":"0af158c07792000b","fromSide":"right","toNode":"75aac608ab4d883e","toSide":"left"},
+		{"id":"9fb8daa5bb38f473","fromNode":"4deee8f18fa814df","fromSide":"right","toNode":"75aac608ab4d883e","toSide":"left"},
+		{"id":"94cdb6393e85a882","fromNode":"1f5c080289e5de83","fromSide":"left","toNode":"c0998d06ea84b6f3","toSide":"right","label":"Qt core"},
+		{"id":"798b284fbd767a7d","fromNode":"c0998d06ea84b6f3","fromSide":"left","toNode":"0885e1c714b359f1","toSide":"right","label":"1."},
+		{"id":"5053163544a22a6e","fromNode":"c0998d06ea84b6f3","fromSide":"left","toNode":"3ed1b175afc3273c","toSide":"right","label":"2."},
+		{"id":"635300dbff343b82","fromNode":"c0998d06ea84b6f3","fromSide":"left","toNode":"a5bcf0502e5bd39b","toSide":"right","label":"3."},
+		{"id":"992d4b0a0c4a9a6a","fromNode":"c0998d06ea84b6f3","fromSide":"left","toNode":"4c2f1797cbb5d70c","toSide":"right","label":"4."},
+		{"id":"a24fcf0e9f65590d","fromNode":"c0998d06ea84b6f3","fromSide":"bottom","toNode":"990f2f5b4e7cfdd3","toSide":"top","label":"5."},
+		{"id":"c6a504f90b7c4090","fromNode":"5f46d7dd4d15a9ec","fromSide":"left","toNode":"482e456d44be3bf8","toSide":"right"}
+	]
+}
