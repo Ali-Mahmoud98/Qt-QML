@@ -37,4 +37,15 @@ This repository contains comprehensive learning materials, examples, and notes f
 - Basic C++ knowledge
 - Qt Creator IDE
 
-## NOTE: It is good to read using Osidian to be able to open the `.canvas` files.
+## Canvas Diagrams
+This repository includes `.canvas` files that provide visual representations of concepts and workflows. To view these diagrams:
+
+### Recommended Tools
+- [Obsidian](https://obsidian.md/) - Primary tool for viewing `.canvas` files
+- [Visual Studio Code](https://code.visualstudio.com/) with Canvas Viewer extension (alternative)
+
+### Opening Canvas Files
+1. Install Obsidian
+2. Open this repository as an Obsidian vault
+3. Navigate to any `.canvas` file
+4. Double-click to open and interact with the diagram
